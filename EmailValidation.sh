@@ -4,7 +4,7 @@ shopt -s extglob
 
 function checkEmailValidatiion
 {
-	if [[ $email =~ $emailPatternPart1  ]]
+	if [[ $email =~ $emailPatternPart2  ]]
 	then
    	echo "Valid"
 	else
@@ -14,5 +14,6 @@ function checkEmailValidatiion
 
 echo "Enter the Email"
 read email
-emailPatternPart1="^[a-z]{1}[a-z0-9]{63}$"
+emailPatternPart1="^[a-z]{1}[a-z0-9]{1,254}$"
+emailPatternPart2="^@[a-z0-9]{1,320}$"
 checkEmailValidatiion
