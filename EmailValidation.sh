@@ -14,5 +14,5 @@ function checkEmailValidatiion
 
 echo "Enter the Email"
 read email
-emailPatternPart1="^[a-z]{1}[a-z0-9]{63}$"
+emailPatternPart1="^[a-z]{1}[a-z0-9]{1,254}$"
 checkEmailValidatiion
